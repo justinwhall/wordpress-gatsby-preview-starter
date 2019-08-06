@@ -21,9 +21,9 @@ The repository contains a WordPress docker container plus a Gatsby starter that 
 
 5. **`docker-compose up`**
 
-6. **run through WordPress install @ http://localhost:8000**
+6. **Run through WordPress install @ http://localhost:8000**
 
-7. **activate WPGraphQL**
+7. **Activate WPGraphQL**
 
 8. **Activate WP Headless theme**
 
