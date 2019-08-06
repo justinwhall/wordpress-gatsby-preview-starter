@@ -1,0 +1,56 @@
+{
+  "name": "wordpress-gatsby-preview-starter",
+  "private": true,
+  "description": "A starter for WordPress + Gatsby that supports live previews",
+  "version": "0.1.0",
+  "author": "Justin W. Hall <justinwhall@me.com>",
+  "dependencies": {
+    "apollo-boost": "^0.1.20",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-link": "^1.2.12",
+    "apollo-link-context": "^1.0.18",
+    "apollo-link-http": "^1.5.15",
+    "gatsby": "^2.13.29",
+    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-typography": "^2.3.2",
+    "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-source-graphql-universal": "^3.1.4",
+    "isomorphic-fetch": "^2.2.1",
+    "prismjs": "^1.17.1",
+    "query-string": "^6.8.2",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.75",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "homepage": "https://github.com/justinwhall/wordpress-gatsby-preview-starter",
+  "keywords": [
+    "gatsby",
+    "WordPress",
+    "Preview"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinwhall/wordpress-gatsby-preview-starter.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -p 3000",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  }
+}
