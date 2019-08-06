@@ -2,6 +2,8 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import NotFound from './404';
+import Layout from "../components/layout"
+
 
 const PREVIEW_QUERY = gql`
   query getPreview($id: Int!) {
@@ -50,10 +52,10 @@ const preview = (props) => {
         }
 
         return (
-          <>
+          <Layout location={props.location} >
             <h1>{preview.title}</h1>
             <div dangerouslySetInnerHTML={{__html: preview.content}} />
-          </>
+          </Layout>
         )
       }}
     </Query>

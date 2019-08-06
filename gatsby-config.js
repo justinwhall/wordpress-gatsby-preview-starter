@@ -22,7 +22,7 @@ module.exports = {
       options: {
         typeName: 'WORDPRESS',
         fieldName: 'wordpress',
-        url: `http://localhost/graphql`,
+        url: `http://localhost:8000/graphql`,
       },
     },
   ],

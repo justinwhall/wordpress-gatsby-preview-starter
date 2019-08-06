@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Layout from "../components/layout"
 
-// This query is executed at build time by Gatsby.
+
 export const GatsbyQuery = graphql`
   {
     wordpress {
@@ -15,11 +16,10 @@ export const GatsbyQuery = graphql`
   }
 `;
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const {nodes} = data.wordpress.posts;
   return (
-    <div style={{ textAlign: 'center', maxWidth: '600px', margin: '50px auto' }}>
-      <h1> Gatsby Preview with Apollo</h1>
+    <Layout location={location}>
       <hr />
       {nodes.map(post => (
         <div key={post.title} className="post">
@@ -27,6 +27,6 @@ export default ({ data }) => {
           <div dangerouslySetInnerHTML={{__html: post.excerpt}} />
         </div>
       ))}
-    </div>
+    </Layout>
   )
 }
