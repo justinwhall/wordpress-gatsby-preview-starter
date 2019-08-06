@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `WordPress + Gatsby + Preview`,
     author: `Justin W. Hall`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A starter for WordPress + Gatsby that supports live previews.`,
     siteUrl: `https://localhost:3000`,
     social: {
       twitter: `justinwhall`,
