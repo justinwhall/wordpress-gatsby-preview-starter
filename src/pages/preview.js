@@ -30,35 +30,34 @@ const preview = (props) => {
   const intId = parseInt(id);
 
   return (
-    <Query
-    query={PREVIEW_QUERY}
-    variables={{
-      id: intId,
-      nonce,
-      postType,
-    }}
-    >
-      {({ data, loading, error }) => {
-        if (loading) return <p>Loading preview...</p>;
-        if (error) return <p>Error: ${error.message}</p>;
-
-        if (!data.postBy.revisions.nodes.length) {
-          return <NotFound />
-        }
-
-        const preview = data.postBy.revisions.nodes[0];
-        if (!preview) {
-          return null;
-        }
-
-        return (
-          <Layout location={props.location} >
-            <h1>{preview.title}</h1>
-            <div dangerouslySetInnerHTML={{__html: preview.content}} />
-          </Layout>
-        )
+    <Layout location={props.location}>
+      <Query
+      query={PREVIEW_QUERY}
+      variables={{
+        id: intId,
+        nonce,
+        postType,
       }}
-    </Query>
+      >
+          {({ data, loading, error }) => {
+            if (loading) return <p>Loading preview...</p>;
+            if (error) return <p>Error: ${error.message}</p>;
+
+            const preview = data.postBy.revisions.nodes[0];
+
+            if (!data.postBy.revisions.nodes.length || !preview) {
+              return <NotFound />
+            }
+
+            return (
+              <>
+                <h1>{preview.title}</h1>
+                <div dangerouslySetInnerHTML={{__html: preview.content}} />
+              </>
+            )
+          }}
+      </Query>
+    </Layout>
   );
 }
 
