@@ -12,17 +12,17 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-page-creator",
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        path: `${__dirname}/src/pages`
+      }
     },
     {
       resolve: 'gatsby-source-graphql-universal',
       options: {
-        typeName: 'WORDPRESS',
-        fieldName: 'wordpress',
-        url: `http://localhost:8000/graphql`,
+        typeName: 'WPGraphQL',
+        fieldName: 'wpgraphql',
+        url: `http://localhost:3030/graphql`,
       },
     },
   ],

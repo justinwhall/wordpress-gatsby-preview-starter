@@ -1,45 +1,33 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
- WordPress + Gatsby + Preview Starter
-</h1>
+# Gatsby Theme Sales Site
 
-The repository contains a WordPress docker container plus a Gatsby starter that supports live previews.
+See the [live demo](https://gatsby-theme-sales-site.netlify.com/)
 
-## 🚀 Quick start
+[![Netlify Status](https://api.netlify.com/api/v1/badges/92636c0c-5e5f-4ea6-b762-a3261beca3f9/deploy-status)](https://app.netlify.com/sites/gatsby-theme-sales-site/deploys)
 
-1. **Clone this repo.**
+## Installation
 
-2. **Rename `sample.env` > `.env` & enter creds. Hint: current creds will work.**
+To use this theme in your Gatsby sites, follow these instructions:
 
-3. **Navigate into the `wordpress-gatsby-preview-starter` directory.**
+1.  Install the theme
+    ```sh
+    npm i gatsby-theme-sales-site
+    ```
 
-4. **`npm install`**
+    or
 
-5. **`docker-compose up`**
+    ```sh
+    yarn add gatsby-sales-site
+    
+2.  Add the theme to your `gatsby-config.js`:
+    ```js
+    module.exports = {
+      plugins: [`gatsby-theme-sales-site`]
+    }
+    ```
+    
+3.  Start your site
+    ```sh
+    gatsby develop
+    ```
 
-6. **Run through WordPress install @ http://localhost:8000**
-
-7. **Activate WPGraphQL**
-
-8. **Activate WP Headless theme**
-
-9. **Enable Permalinks**
-
-10. **Fire up Gatsby: In the root of the project run `npm run develop`**
-
-11. **Navigate to the "Hello World" post, change something & click the preview button**
-
-
-## Known limitations:
-
-1. Both the WordPress Docker container need to run on the same domain. Locally this is, of course, `localhost:anyport`. In production, this could also be `https://mydomain.com` + `https://data.mydomain.com`.
-
-2. Gutenberg is disabled. There are some outstanding bugs in regards to filtering `preview_post_link` noted [here](https://github.com/WordPress/gutenberg/issues/13998).
-
-3. Gatsby must run on port `:3000`. `Access-Control-Allow-Origin` header is hard-coded in to `3000` in `headers.php`
-
-4. Supports posts only but `postType` is being passed to Apollo so this could be easily extended to pages and custom post types.
+4.  To edit content from the theme, open `http://localhost:8000/admin/` and setup your netlify account

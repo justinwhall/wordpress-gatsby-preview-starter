@@ -13,7 +13,7 @@
  * @return array
  */
 function graphiql_playground_headers( $headers ) {
-	$headers['Access-Control-Allow-Origin']      = 'http://localhost:3000';
+	$headers['Access-Control-Allow-Origin']      = 'http://localhost:8000';
 	$headers['Access-Control-Allow-Credentials'] = 'true';
 	$access_control                              = $headers['Access-Control-Allow-Headers'];
 

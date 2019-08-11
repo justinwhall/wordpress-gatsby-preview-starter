@@ -2,7 +2,6 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import NotFound from './404';
-import Layout from "../components/layout"
 
 
 const PREVIEW_QUERY = gql`
@@ -30,7 +29,6 @@ const preview = (props) => {
   const intId = parseInt(id);
 
   return (
-    <Layout location={props.location}>
       <Query
       query={PREVIEW_QUERY}
       variables={{
@@ -57,7 +55,6 @@ const preview = (props) => {
             )
           }}
       </Query>
-    </Layout>
   );
 }
 

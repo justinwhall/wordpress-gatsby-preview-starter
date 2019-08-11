@@ -31,7 +31,7 @@ function set_headless_preview_link( $link ) {
 	flush_rewrite_rules();
 	global $post;
 
-	return 'http://localhost:3000/'
+	return 'http://localhost:8000/'
 		. 'preview/'
 		. $post->ID . '/'
 		. $post->post_type . '/'

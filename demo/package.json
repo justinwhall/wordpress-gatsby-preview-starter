@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "demo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -p 8000",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "gatsby": "^2.13.57",
+    "gatsby-image": "^2.2.8",
+    "gatsby-plugin-sharp": "^2.2.11",
+    "gatsby-transformer-sharp": "^2.2.6",
+    "path": "^0.12.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "wordpress-gatsby-preview-starter": "*"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

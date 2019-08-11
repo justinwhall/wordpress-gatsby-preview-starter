@@ -1,8 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
+import React from "react";
+import { Link } from "gatsby";
+import { rhythm, scale } from "../utils/typography";
+import Bio from "./Bio";
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+    const { children } = props
 
     const header = (
         <>
@@ -21,7 +23,7 @@ const Layout = ({ children }) => {
               }}
               to={`/`}
             >
-              WordPres + Gatsby
+              WordPress + Gatsby
             </Link>
           </h1>
           <div
@@ -32,8 +34,9 @@ const Layout = ({ children }) => {
             color: '#666',
           }}
           >
-            With ❤️ for Live Previews
+            With <span role="img" aria-label="heart">💖</span> for Live Previews
           </div>
+          <Bio />
         </>
     );
 
@@ -42,10 +45,23 @@ const Layout = ({ children }) => {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(28),
+          maxWidth: rhythm(29),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <iframe
+          title="Star on GitHub"
+          src="https://ghbtns.com/github-btn.html?user=justinwhall&repo=wordpress-gatsby-preview-starter&type=star&count=true&size=large"
+          frameBorder="0"
+          scrolling="0"
+          width="158px"
+          height="30px"
+          style={{
+            position: 'absolute',
+            left: 10,
+            top: 10,
+          }}
+          ></iframe>
         <header>{header}</header>
         <main>{children}</main>
         <footer>

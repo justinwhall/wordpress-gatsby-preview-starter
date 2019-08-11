@@ -21,7 +21,7 @@ export const client = new ApolloClient({
         }
         ),
         new HttpLink({
-            uri: 'http://localhost:8000/graphql',
+            uri: 'http://localhost:3030/graphql',
             credentials: 'include',
         }),
     ])
