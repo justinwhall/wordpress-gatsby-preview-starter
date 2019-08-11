@@ -1,3 +1,3 @@
-[submodule "wp-graphql"]
-	path = wp-graphql
+[submodule "theme/wp-graphql"]
+	path = theme/wp-graphql
 	url = https://github.com/wp-graphql/wp-graphql.git
