@@ -1,5 +1,4 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import queryString from 'query-string';
 
@@ -13,6 +12,7 @@ const withPreview = (args = { preview: false }) => Component => {
       post,
     } = parsed;
 
+    // Id needs to be an int for preview query.
     const id = parseInt(post, 10);
 
     /**
