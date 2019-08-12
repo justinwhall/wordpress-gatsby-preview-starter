@@ -3,7 +3,7 @@ module.exports = async ({ actions, graphql }) => {
   const GET_POSTS = `
   query GET_POSTS($first:Int $after:String){
     wpgraphql {
-      posts(
+      beers(
         first: $first
         after:$after
       ) {
@@ -14,7 +14,7 @@ module.exports = async ({ actions, graphql }) => {
         nodes {
           id
           uri
-          postId
+          beerId
           title
         }
       }
@@ -29,19 +29,18 @@ module.exports = async ({ actions, graphql }) => {
     await graphql(GET_POSTS, variables).then(({ data }) => {
       const {
         wpgraphql: {
-          posts: {
+          beers: {
             nodes,
             pageInfo: { hasNextPage, endCursor },
           },
         },
       } = data
 
-      const nodeIds = nodes.map(node => node.postId)
+      const nodeIds = nodes.map(node => node.beerId)
+      console.log('beers => ', nodeIds);
 
-      console.log('posts => ', nodeIds);
-
-      const blogTemplate = path.resolve(`./src/templates/blog.js`)
-      const blogPagePath = !variables.after ? `/` : `/page/${pageNumber}`
+      const blogTemplate = path.resolve(`./src/templates/beers.js`)
+      const blogPagePath = !variables.after ? `/beers/` : `/beers/page/${pageNumber}`
 
       blogPages[pageNumber] = {
         path: blogPagePath,
@@ -64,17 +63,17 @@ module.exports = async ({ actions, graphql }) => {
     })
 
   await fetchPosts({ first: 12, after: null }).then(allPosts => {
-    const postTemplate = path.resolve(`./src/templates/post.js`)
+    const postTemplate = path.resolve(`./src/templates/beer.js`)
 
     blogPages.map(blogPage => {
-      console.log(`createBlogPage ${blogPage.context.pageNumber}`)
+      console.log(`createBeersPage ${blogPage.context.pageNumber}`)
       createPage(blogPage)
     })
 
     allPosts.map(post => {
-      console.log(`create post: ${post.uri}`)
+      console.log(`create beer post: ${post.uri}`)
       createPage({
-        path: `/blog/${post.uri}/`,
+        path: `/beer/${post.uri}/`,
         component: postTemplate,
         context: post,
       })

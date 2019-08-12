@@ -31,11 +31,13 @@ function set_headless_preview_link( $link ) {
 	flush_rewrite_rules();
 	global $post;
 
-	return 'http://localhost:8000/'
-		. 'preview/'
-		. $post->ID . '/'
-		. $post->post_type . '/'
-		. wp_create_nonce( 'wp_rest' );
+	$prefix = $post->post_type === 'post' ? 'blog' : $post->post_type;
+
+	return 'http://localhost:8000/' . $prefix . '/'
+		. get_page_uri( $post->ID ) . '?'
+		. 'post=' . $post->ID
+		. '&nonce=' . wp_create_nonce( 'wp_rest' )
+		. '&preview=true';
 }
 
 add_filter( 'preview_post_link', 'set_headless_preview_link' );

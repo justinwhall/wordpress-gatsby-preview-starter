@@ -13,3 +13,6 @@ require_once 'inc/log.php';
 
 // Admin modifications.
 require_once 'inc/admin.php';
+
+// Register customer post type.
+require_once 'inc/post-type.php';
