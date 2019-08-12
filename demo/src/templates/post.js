@@ -6,6 +6,9 @@ import withPreview from '../../../theme/src/components/withPreview';
 
 const PostTemplate = (props) => {
 
+  /**
+   * Determine if we're looking at a preview or live page.
+   */
   const postData = props.preview ?
     props.preview.postBy.revisions.nodes[0] :
     props.data.wpgraphql.post

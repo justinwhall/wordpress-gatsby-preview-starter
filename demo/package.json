@@ -15,10 +15,15 @@
     "gatsby": "^2.13.57",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-sharp": "^2.2.11",
+    "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-sharp": "^2.2.6",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "typeface-merriweather": "^0.0.72",
+    "typeface-montserrat": "^0.0.75",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19",
     "wordpress-gatsby-preview-starter": "*"
   },
   "devDependencies": {
