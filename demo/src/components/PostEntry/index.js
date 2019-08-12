@@ -2,8 +2,6 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 const PostEntry = ({ post }) => {
-  console.log(post);
-
   const {
     title,
     content,
