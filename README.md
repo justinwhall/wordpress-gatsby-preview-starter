@@ -1,33 +1,41 @@
-# Gatsby Theme Sales Site
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+ WordPress + Gatsby + Preview Starter
+</h1>
 
-See the [live demo](https://gatsby-theme-sales-site.netlify.com/)
+The repository contains a WordPress docker container plus a Gatsby starter that supports live previews.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/92636c0c-5e5f-4ea6-b762-a3261beca3f9/deploy-status)](https://app.netlify.com/sites/gatsby-theme-sales-site/deploys)
+## 🚀 Quick start
 
-## Installation
+1. **Clone this repo.**
 
-To use this theme in your Gatsby sites, follow these instructions:
+2. **Rename `theme/sample.env` > `.env` & enter creds. Hint: current creds will work.**
 
-1.  Install the theme
-    ```sh
-    npm i gatsby-theme-sales-site
-    ```
+4. **In the root of the repo run `yarn`**
 
-    or
+5. **`docker-compose up`**
 
-    ```sh
-    yarn add gatsby-sales-site
-    
-2.  Add the theme to your `gatsby-config.js`:
-    ```js
-    module.exports = {
-      plugins: [`gatsby-theme-sales-site`]
-    }
-    ```
-    
-3.  Start your site
-    ```sh
-    gatsby develop
-    ```
+6. **Run through WordPress install @ http://localhost:3000**
 
-4.  To edit content from the theme, open `http://localhost:8000/admin/` and setup your netlify account
+7. **Activate WPGraphQL**
+
+8. **Activate WP Headless theme**
+
+9. **Enable Permalinks**
+
+10. **Fire up the Gatsby Demo Site: In the root of the project run `yarn workspace demo develop`**
+
+11. **Navigate to the "Hello World" post, change something & click the preview button**
+
+
+## Known limitations:
+
+1. Both the WordPress Docker container need to run on the same domain. Locally this is, of course, `localhost:anyport`. In production, this could also be `https://mydomain.com` + `https://data.mydomain.com`.
+
+2. Gutenberg is disabled. There are some outstanding bugs in regards to filtering `preview_post_link` noted [here](https://github.com/WordPress/gutenberg/issues/13998).
+
+3. Gatsby must run on port `:8000`. `Access-Control-Allow-Origin` header is hard-coded in to `8000` in `headers.php`
