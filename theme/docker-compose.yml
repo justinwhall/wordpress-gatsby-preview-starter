@@ -27,14 +27,14 @@ services:
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
     ports:
-      - ${IP}:8080:80
+      - "8080:80"
     links:
       - db:db
 
   db:
     image: mysql:latest
     ports:
-      - ${IP}:3306:3306
+      - "3306:3306"
     command: [
         '--default_authentication_plugin=mysql_native_password',
         '--character-set-server=utf8mb4',
