@@ -13,13 +13,15 @@ The repository contains a WordPress docker container plus a Gatsby starter that 
 
 1. **Clone this repo.**
 
-2. **Rename `theme/sample.env` > `.env` & enter creds. Hint: current creds will work.**
+2. **Rename `sample.env` > `.env` & enter creds. Hint: current creds will work.**
 
-4. **In the root of the repo run `yarn`**
+3. **Navigate into the `wordpress-gatsby-preview-starter` directory.**
+
+4. **`npm install`**
 
 5. **`docker-compose up`**
 
-6. **Run through WordPress install @ http://localhost:3000**
+6. **Run through WordPress install @ http://localhost:8000**
 
 7. **Activate WPGraphQL**
 
@@ -27,7 +29,7 @@ The repository contains a WordPress docker container plus a Gatsby starter that 
 
 9. **Enable Permalinks**
 
-10. **Fire up the Gatsby Demo Site: In the root of the project run `yarn workspace demo develop`**
+10. **Fire up Gatsby: In the root of the project run `npm run develop`**
 
 11. **Navigate to the "Hello World" post, change something & click the preview button**
 
@@ -38,4 +40,6 @@ The repository contains a WordPress docker container plus a Gatsby starter that 
 
 2. Gutenberg is disabled. There are some outstanding bugs in regards to filtering `preview_post_link` noted [here](https://github.com/WordPress/gutenberg/issues/13998).
 
-3. Gatsby must run on port `:8000`. `Access-Control-Allow-Origin` header is hard-coded in to `8000` in `headers.php`
+3. Gatsby must run on port `:3000`. `Access-Control-Allow-Origin` header is hard-coded in to `3000` in `headers.php`
+
+4. Supports posts only but `postType` is being passed to Apollo so this could be easily extended to pages and custom post types.
