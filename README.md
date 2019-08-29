@@ -17,7 +17,7 @@ The repository contains a WordPress Docker container plus a Gatsby _theme_ that 
 
 4. **In the root of the repo run `yarn`**
 
-5. **`docker-compose up`**
+5. From the `theme` directory, run **`docker-compose up`**
 
 6. **Run through WordPress install @ http://localhost:3030**
 
