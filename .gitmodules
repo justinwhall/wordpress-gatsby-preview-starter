@@ -1,3 +1,4 @@
 [submodule "theme/wp-graphql"]
 	path = theme/wp-graphql
 	url = https://github.com/wp-graphql/wp-graphql.git
+	barnch = master
