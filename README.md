@@ -11,27 +11,28 @@ The repository contains a WordPress Docker container plus a Gatsby _theme_ that 
 
 ## 🚀 Quick start
 
-1. **Clone this repo.**
+1. **RECURSIVELY Clone this repo. `git clone --recursive ...`**
 
 2. **Rename `theme/sample.env` > `.env` & enter creds. Hint: current creds will work.**
 
-4. **In the root of the repo run `yarn`**
+3. **In the root of the repo run `yarn`**
 
-5. From the `theme` directory, run **`docker-compose up`**
+4. From the `theme` directory, run **`docker-compose up`**
 
-6. **Run through WordPress install @ http://localhost:3030**
+5. **Run through WordPress install @ http://localhost:3030**
 
-7. **Activate WPGraphQL plugin**
+6. **Activate WPGraphQL plugin**
 
-8. **Activate WP Headless theme**
+7. **Activate WP Headless theme**
 
-9. **Enable Permalinks**
+8. **Enable Permalinks**
 
-10. **Fire up the Gatsby Starter Site: In the root of the project run `yarn workspace site develop`**
+9. **Fire up the Gatsby Starter Site: In the root of the project run `yarn workspace site develop`**
 
-11. **Navigate to the "Hello World" post, change something & click the preview button**
+10. **Navigate to the "Hello World" post, change something & click the preview button**
 
 ## Custom Post Type Previews?
+
 Yes! The included WordPress theme registers a _beer_ custom post type. Simply add a beer post and click the preview button.
 
 ## Known limitations:
